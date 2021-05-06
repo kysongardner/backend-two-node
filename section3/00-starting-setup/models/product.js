@@ -29,7 +29,6 @@ module.exports = class Product {
   }
 
   save() {
-    this.id = Math.random().toString()
     getProductsFromFile(products => {
       if (this.id) {
         const existingProductIndex = products.findIndex(prod => prod.id === this.id)
